@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETS</title>
+</head>
+<body>
+    <H1>set</H1>
+    <script>
+        //tipo de dato set
+        //arreglo con valores unicos
+        
+        const set =new Set([1,2,3,4,5,true,false,{},[],"sdf",true,false,"hola","ola"]);
+        console.log(set);
+        console.log(set.size);
+
+        const set2=new Set();
+        set2.add("asfasf");
+        set2.add(1);
+        set2.add(3)
+        console.log(set2)
+
+        for(item of set){
+            console.log(item)
+        }
+        console.log("otro recorrido")
+        set2.forEach(item=>console.log(item))
+        //convertir a set a un arreglo
+        are=Array.from(set)
+        console.log(are)
+
+        set.delete("ola")
+        console.log(set)
+
+        console.log(set.has("hola"))
+        set2.clear()
+        console.log(set2)
+
+    </script>
+</body>
+</html>
