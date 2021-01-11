@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cuadradopromesa(value) {
+            if(typeof value !=="number"){
+                return Promise.reject(`Error, el valor "${value}" ingresado no es un nro`);
+            }
+            return new Promise((resolve,reject)=>{
+            setTimeout(() => {
+            resolve({
+                value,
+                resolve:value*value
+            })
+            }, 0|Math.random()*1000);
+            });
+        }
+        async function funcionasincrona(params) {
+            try{
+                console.log("inicio async funcion")
+                let obj= await cuadradopromesa(0);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(1);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(2);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(3);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(4);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(5);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+            }catch(err){
+                console.error(err)
+            }
+        }
+        funcionasincrona();
+
+        const funcionasincronaexpresada=async()=>{
+            try{
+                console.log("inicio async funcion")
+                let obj= await cuadradopromesa(6);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(7);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(8);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(9);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(10);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+
+                obj=await cuadradopromesa(11);
+                console.log(`async funcion ${obj.value} ,${obj.resolve}`)
+            }catch(err){
+                console.error(err)
+            }
+        }
+
+        funcionasincronaexpresada();
+    </script>
+    
+</body>
+</html>
