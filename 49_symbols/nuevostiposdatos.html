@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos tipos de datos</title>
+</head>
+<body>
+    <h1>Nuevos tipos</h1>
+    <script>
+        //symbol=caracteristicas de obj privadas
+        //no se usa new
+        //nos permite crear identificadores
+        
+        let id=Symbol("id");
+        let id2=Symbol("id2");
+    
+        console.log(id===id2);
+        console.log(id);
+        console.log(id2)
+
+        const NOMBRE=Symbol();
+        const comentario=Symbol();
+
+        const persona={
+            [NOMBRE]:"YHOMIRA alexandra",
+            edad:24
+
+        };
+        console.log(persona)
+
+        persona.NOMBRE="fabi ale";
+        console.log(persona)
+        console.log(persona.NOMBRE)
+        console.log(persona[NOMBRE])
+
+        console.log(Object.getOwnPropertySymbols(persona))
+        
+    </script>
+</body>
+</html>
