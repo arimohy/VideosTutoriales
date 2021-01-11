@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronia en JavaScript</title>
+</head>
+<body>
+    <h1>Asincronia en javascript</h1> 
+    <script>
+        //settimeout
+        console.log("inicio")
+        let temporizador=setTimeout(() => {
+            console.log("prbado")
+            
+        }, 3000);
+        clearTimeout();
+        console.log("despues de clear")
+        /*
+        //setinterval
+        console.log("inicio")
+        setInterval(() => {
+            console.log("en intervalos")
+        }, 1000);
+        //
+        setInterval(() => {
+            console.log(new Date().toLocaleTimeString());
+        }, 1000);
+        
+        */
+    </script>
+</body>
+</html>
