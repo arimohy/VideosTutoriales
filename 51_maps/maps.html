@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maps</title>
+</head>
+<body>
+    <script>
+        let mapa=new Map();
+        mapa.set("nombre","yhomi")
+        mapa.set("apellido","yupayccana")
+        mapa.set("edad","24")
+
+        console.log(mapa);
+        console.log(mapa.size);
+        console.log(mapa.has("nombre"));
+        //lave valor
+        for(let [key,value] of mapa){
+            console.log(`llave ${key},valor ${value}`)
+        }
+        const mapa2=new Map([
+            ["nombre","alexandra"],
+            ["edad",15],
+
+        ])
+        console.log(mapa2)
+
+        const llavesmapa2=[...mapa2.keys()]
+        const valoresmapa2=[...mapa2.values()]
+        console.log(llavesmapa2)
+        console.log(valoresmapa2)
+    </script>
+</body>
+</html>
