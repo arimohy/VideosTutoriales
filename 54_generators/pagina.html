@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //convierte el codigo de una funcion en un iterable
+        function* iterable() {
+            //es como un return
+            yield "hola";
+            console.log("provando");
+            yield "holasss";
+        }
+        let iterador=iterable();
+        /*
+        console.log(iterador.next());
+        console.log(iterador.next());
+        console.log(iterador.next());*/
+
+        for(let y of iterador){
+            console.log(y)
+        }
+        const arr=[...iterable()];
+        console.log(arr);
+
+        function  cuadrado(valor){
+            setTimeout(() => {
+                console.log({valor,resultado:valor*valor})
+            }, Math.random()*1000);
+            
+            return{
+            valor,
+            resultado:valor*valor
+            }
+        }
+        function * generador() {
+            console.log("Inicio");
+
+            yield cuadrado(0);
+            yield cuadrado(1);
+            yield cuadrado(2);
+            yield cuadrado(3);
+            yield cuadrado(4);
+            yield cuadrado(5);
+            console.log("termino")
+        }
+        let gen =generador();
+        for(let y of gen){
+            console.log(y)
+        }
+    </script>
+</body>
+</html>
