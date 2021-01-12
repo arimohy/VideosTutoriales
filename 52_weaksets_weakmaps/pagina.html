@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //referencia debiles:
+        //weakksets y weakmaps
+        //no se puede recorrer
+        //no se puede utilizar el clear
+        //solo se elimina 1 por 1
+        //se agrega 1 x 1
+        //const ws=new WeakSet([1,2,3,4,5,true])
+        let valor={"valor":4}
+        const ws =new WeakSet();
+        ws.add(valor)
+        console.log(WeakSet(ws))
+    </script>
+</body>
+</html>
