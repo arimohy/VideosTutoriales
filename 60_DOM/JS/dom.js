@@ -143,7 +143,8 @@ $whatlsDOM.textContent=text;
 $whatlsDOM.innerHTML=text;
 
 $whatlsDOM.outerHTML=text;*/
-//
+//traversing
+/*
 const $cards=document.querySelector(".cards");
 console.log($cards)
 console.log($cards.children)
@@ -157,4 +158,78 @@ console.log($cards.nextElementSibling)
 //closer metodo que busca el ancestro
 console.log($cards.closest("div"))
 console.log($cards.closest("body"))
-console.log($cards.children[3].closest("section"))
+console.log($cards.children[3].closest("section"))*/
+//crear etiquetas dinamicas
+
+//const $cards=document.querySelector(".cards");
+const $figure =document.createElement("figure"),
+$img=document.createElement("img"),
+$figcaption=document.createElement("figcaption"),
+$figcaptionText=document.createTextNode("Animals"),
+$cards=document.querySelector(".cards");
+
+const $figure2=document.createElement("figure");
+
+
+$img.setAttribute("src","https://placeimg.com/200/200/animals");
+$img.setAttribute("alt","Animals");
+$figure.classList.add("card");
+
+$figcaption.appendChild($figcaptionText)
+$figure.appendChild($img);
+$figure.appendChild($figcaption)
+$cards.appendChild($figure);
+
+$figure2.innerHTML=`
+<img src="https://placeimg.com/200/200/people" alt="people">
+<figcaption>people</figcaption>`;
+
+$figure2.classList.add("card");
+$cards.appendChild($figure2);
+
+const estaciones=["primavera","verano","otono","invierno"],
+$ul=document.createElement("ul");
+
+document.write("<h3>Estaciones delaño </h3>");
+document.body.appendChild($ul);
+
+estaciones.forEach(el=>{
+        const $li = document.createElement("li");
+        $li.textContent =el;
+        $ul.appendChild($li)
+})
+
+const continentes=["africa","america","europa","asia","australia"],
+$ul2=document.createElement("ul");
+
+document.write("<h3>Continentes del mundo</h3>")
+document.body.appendChild($ul2);
+$ul2.innerHTML="";
+continentes.forEach((el)=>($ul2.innerHTML +=`<li>${el}</li>`))
+
+const meses=[
+        "enero",
+        "febrero",
+        "marrzo",
+        "abril",
+        "mayo",
+        "junio" ,
+        "julio",
+        "agosto",
+        "setiembre",
+        "octubre",
+        "noviembre",
+        "diciembre",
+],
+$ul3=document.createElement("ul"),
+$fragment=document.createDocumentFragment();
+
+meses.forEach(el=>{
+        const $li =document.createElement("li");
+        $li.textContent=el;
+        $fragment.appendChild($li)
+})
+
+document.write("<h3> Meses del año </h3>");
+$ul3.appendChild($fragment)
+document.body.appendChild($ul3)
