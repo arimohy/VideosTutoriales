@@ -290,3 +290,24 @@ $newCard.classList.add("card");
 
 //$cards.removeChild($cards.lastElementChild)
 document.body.appendChild($clonecards);*/
+/*
+.insertAdjance
+*/
+
+const $cards=document.querySelector(".cards"),
+$newCard=document.createElement("figure");
+
+let $contencard=`
+<img src="https://placeimg.com/200/200/any" alt="Any"> 
+<figcaption></figcaption>
+`;
+$newCard.classList.add("card");
+
+$newCard.insertAdjacentHTML("beforeend",$contencard);
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Any")
+$cards.insertAdjacentElement("afterbegin",$newCard);
+//iguales
+$cards.prepend($newCard)
+$cards.before($newCard)
+$cards.append($newCard)
+$cards.after($newCard)
