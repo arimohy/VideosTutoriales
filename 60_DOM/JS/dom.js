@@ -236,7 +236,7 @@ $ul3.appendChild($fragment)
 document.body.appendChild($ul3)*/
 
 //templade
-
+/*
 const $cards=document.querySelector(".cards"),
 $template=document.getElementById("template-card").content,
 $fragment=document.createDocumentFragment();
@@ -271,4 +271,22 @@ cardContent.forEach((el)=>{
         $fragment.appendChild($clone);
 });
 
-$cards.appendChild($fragment);
+$cards.appendChild($fragment);*/
+/*
+const $cards=document.querySelector(".cards"),
+$newCard=document.createElement("figure"),
+$clonecards=$cards.cloneNode(true);
+
+$newCard.innerHTML=`
+<img src="https://placeimg.com/200/200/any" alt="Any"> 
+<figcaption>Any</figcaption>
+`;
+$newCard.classList.add("card");
+
+//$cards.replaceChild($newCard,$cards.children[2]);
+//primera
+//$cards.insertBefore($newCard,$cards.firstElementChild)
+//eliminar
+
+//$cards.removeChild($cards.lastElementChild)
+document.body.appendChild($clonecards);*/
