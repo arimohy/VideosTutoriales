@@ -101,6 +101,7 @@ varDarkColor=getComputedStyle($html).getPropertyValue("--dark-color");
 $body.style.setProperty("background-color",varDarkColor)
 */
 //clases Css
+/*
  const $card=document.querySelector(".card")
 
  console.log($card)
@@ -122,3 +123,21 @@ $card.classList.replace("rotate-45","rotate-135")
 $card.classList.add("opacity-80","sepia")
 $card.classList.remove("opacity-80","sepia")
 $card.classList.toggle("opacity-80","sepia")
+*/
+const $whatlsDOM=document.getElementById("que-es");
+let text=`
+<p>
+parrafo 1
+</p>
+<p>
+parrafo 2
+</p>
+<mark>
+markbiahiasdg
+</mark>
+`;
+//$whatlsDOM.innerText=text;
+$whatlsDOM.textContent=text;
+$whatlsDOM.innerHTML=text;
+
+$whatlsDOM.outerHTML=text;
