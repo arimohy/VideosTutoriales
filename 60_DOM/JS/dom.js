@@ -162,6 +162,7 @@ console.log($cards.children[3].closest("section"))*/
 //crear etiquetas dinamicas
 
 //const $cards=document.querySelector(".cards");
+/*
 const $figure =document.createElement("figure"),
 $img=document.createElement("img"),
 $figcaption=document.createElement("figcaption"),
@@ -232,4 +233,42 @@ meses.forEach(el=>{
 
 document.write("<h3> Meses del año </h3>");
 $ul3.appendChild($fragment)
-document.body.appendChild($ul3)
+document.body.appendChild($ul3)*/
+
+//templade
+
+const $cards=document.querySelector(".cards"),
+$template=document.getElementById("template-card").content,
+$fragment=document.createDocumentFragment();
+cardContent=[
+        {
+                title:"Tecnologia",
+                img:"https://placeimg.com/200/200/tech" 
+        },
+        {
+                title:"ANIMALES",
+                img:"https://placeimg.com/200/200/animals" 
+        },
+        {
+                title:"Arquitectura",
+                img:"https://placeimg.com/200/200/arch" 
+        },
+        {
+                title:"Personas",
+                img:"https://placeimg.com/200/200/people "
+        },
+        {
+                title:"naturaleza",
+                img:"https://placeimg.com/200/200/nature" 
+        }
+];
+cardContent.forEach((el)=>{
+        $template.querySelector("img").setAttribute("src",el.img);
+        $template.querySelector("img").setAttribute("alt",el.title);
+        $template.querySelector("figcaption").textContent=el.title;
+
+        let $clone=document.importNode($template,true);
+        $fragment.appendChild($clone);
+});
+
+$cards.appendChild($fragment);
