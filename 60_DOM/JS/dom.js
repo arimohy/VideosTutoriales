@@ -359,10 +359,26 @@ const $diveventos=document.querySelectorAll(".eventos-flujo div"),
 $linkenetos=document.querySelector(".eventos-flujo a");
 
 function flujoEventos(e){
-        console.log(`hola te saluda ${this.className},click lo origino ${e.target.className}`);
+        console.log(`hola te saluda ${this},click lo origino ${e.target.className}`);
 
-        e.stopPropagation();
+        //e.stopPropagation();
 }
+
+document.addEventListener("click",(e)=>{
+        console.log("click em ",e.target);
+
+        if(e.target.matches(".eventos-flujo div")){
+                flujoEventos(e);
+        };
+        
+
+        if(e.target.matches(".eventos-flujo a")){
+                alert("soy una amiga jajajaj");
+                e.preventDefault();
+        };
+        
+})
+/*
 
 console.log($diveventos);
 $diveventos.forEach(div=>{
@@ -374,9 +390,11 @@ $diveventos.forEach(div=>{
         div.addEventListener("click",flujoEventos,{
                 capture:false,
                 //once:true//solo hace que se ejecute 1 ves
-        });*/
+        });
 });
 $linkenetos.addEventListener("click",(e)=>{
         alert("soy yhomi :P");
         e.preventDefault();
-})
+        e.stopPropagation();
+
+})*/
