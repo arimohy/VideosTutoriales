@@ -311,7 +311,8 @@ $cards.prepend($newCard)
 $cards.before($newCard)
 $cards.append($newCard)
 $cards.after($newCard)*/
-
+//73
+/*
 function holaMundo(){
         alert("hola mundo....");
         console.log(event);
@@ -350,4 +351,24 @@ const removedobleclick=(e)=>{
         $eventoremover.removeEventListener("dblclick",removedobleclick);
         $eventoremover.disabled=true;
 }
-$eventoremover.addEventListener("dblclick",removedobleclick);
+$eventoremover.addEventListener("dblclick",removedobleclick);*/
+
+//74.
+/*fase burbuja se expande hasta el padre */
+const $diveventos=document.querySelectorAll(".eventos-flujo div");
+
+function flujoEventos(e){
+        console.log(`hola te saluda ${this.className},click lo origino ${e.target.className}`)
+}
+
+console.log($diveventos);
+$diveventos.forEach(div=>{
+        //div.addEventListener("click",flujoEventos)//o con falseen su 3 burbuja
+        //div.addEventListener("click",flujoEventos,false)
+        //captura
+        //div.addEventListener("click",flujoEventos,true)
+        div.addEventListener("click",flujoEventos,{
+                capture:false,
+                once:true
+        });
+})
