@@ -440,7 +440,7 @@ document.addEventListener("DOMContentLoaded",e=>{
 
 window.confirm("confirmar")
 window.prompt("promnt")
-alert("yhomira")*/
+alert("yhomira")
 const $btnAbrir=document.getElementById("abrir-ventana"),
 $btnCerrar=document.getElementById("cerrar-ventana"),
 $btnImprimir=document.getElementById("imprimir-ventana");
@@ -455,3 +455,27 @@ $btnCerrar.addEventListener("click",e=>{
 $btnImprimir.addEventListener("click",e=>{
         window.print();
 })
+console.log("*******objeto url(location)*******")
+console.log(location)
+console.log(location.origin)//rutA
+console.log(location.protocol)
+console.log(location.hash)
+console.log(location.host)
+console.log(location.hostname)
+console.log(location.port)
+console.log(location.href)
+console.log(location.pathname)
+console.log(location.search)
+//location.reload();
+
+console.log("******history*******")
+console.log(history)
+console.log(history.back)*/
+
+console.log("******navigator*******")
+console.log(navigator)
+console.log(navigator.connection)
+console.log(navigator.geolocation)
+console.log(navigator.serviceWorker)//api pata convetir una progresive app
+console.log(navigator.storage)
+console.log(navigator.userAgent)
