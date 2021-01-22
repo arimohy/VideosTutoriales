@@ -354,7 +354,9 @@ const removedobleclick=(e)=>{
 $eventoremover.addEventListener("dblclick",removedobleclick);*/
 
 //74.
+
 /*fase burbuja se expande hasta el padre */
+/*
 const $diveventos=document.querySelectorAll(".eventos-flujo div"),
 $linkenetos=document.querySelector(".eventos-flujo a");
 
@@ -378,7 +380,7 @@ document.addEventListener("click",(e)=>{
         };
         
 })
-/*
+
 
 console.log($diveventos);
 $diveventos.forEach(div=>{
@@ -398,3 +400,39 @@ $linkenetos.addEventListener("click",(e)=>{
         e.stopPropagation();
 
 })*/
+// BOM
+window.addEventListener("resize",(e)=>{
+console.clear();
+console.log("*****Evento*********")
+console.log(window.innerHeight);
+console.log(window.innerWidth);
+console.log(window.outerHeight);
+console.log(window.outerWidth);
+
+console.log(e);
+})
+
+window.addEventListener("scroll",e=>{
+        console.clear();
+        console.log("scrollll")
+        console.log(window.scrollX);
+        console.log(window.scrollY);
+
+        console.log(e);
+})
+window.addEventListener("load",e=>{
+        
+        console.log("screamm...1")
+        console.log(window.screenX);
+        console.log(window.screenY);
+
+        console.log(e);
+})
+document.addEventListener("DOMContentLoaded",e=>{
+        
+        console.log("screamm domcont....")
+        console.log(window.screenX);
+        console.log(window.screenY);
+
+        console.log(e);
+})
