@@ -401,6 +401,7 @@ $linkenetos.addEventListener("click",(e)=>{
 
 })*/
 // BOM
+/*
 window.addEventListener("resize",(e)=>{
 console.clear();
 console.log("*****Evento*********")
@@ -435,4 +436,22 @@ document.addEventListener("DOMContentLoaded",e=>{
         console.log(window.screenY);
 
         console.log(e);
+})
+
+window.confirm("confirmar")
+window.prompt("promnt")
+alert("yhomira")*/
+const $btnAbrir=document.getElementById("abrir-ventana"),
+$btnCerrar=document.getElementById("cerrar-ventana"),
+$btnImprimir=document.getElementById("imprimir-ventana");
+
+let ventana;
+$btnAbrir.addEventListener("click",e=>{
+        ventana=window.open("https://www.facebook.com/yhomira.yupayccana/")
+})
+$btnCerrar.addEventListener("click",e=>{
+        ventana.close();
+})
+$btnImprimir.addEventListener("click",e=>{
+        window.print();
 })
