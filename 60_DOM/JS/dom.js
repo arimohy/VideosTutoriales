@@ -470,7 +470,7 @@ console.log(location.search)
 
 console.log("******history*******")
 console.log(history)
-console.log(history.back)*/
+console.log(history.back)
 
 console.log("******navigator*******")
 console.log(navigator)
@@ -478,4 +478,4 @@ console.log(navigator.connection)
 console.log(navigator.geolocation)
 console.log(navigator.serviceWorker)//api pata convetir una progresive app
 console.log(navigator.storage)
-console.log(navigator.userAgent)
+console.log(navigator.userAgent)*/
