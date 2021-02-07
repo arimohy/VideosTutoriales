@@ -25,7 +25,7 @@
       $xhr.innerHTML = `Error....${xhr.status}: ${message}`
     }
     //console.log(xhr)
-    console.log("Este mensaje cargara de todas formas...........")
+    //console.log("Este mensaje cargara de todas formas...........")
   });
   xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
 
@@ -58,7 +58,7 @@
       let message = err.statusText || "Ocurrio un error";
       $fetch.innerHTML = `Error....${err.status}: ${message}`;
     }).finally(() => {
-      console.log("esto se ejecutara simepre por la promesa de fetch")
+      //console.log("esto se ejecutara simepre por la promesa de fetch")
     });
 
 
@@ -87,7 +87,7 @@
       let message = err.statusText || "Ocurrio un error";
       $fetchasync.innerHTML = `Error....${err.status}: ${message}`;
     } finally {
-      console.log("este es el finally")
+      //console.log("este es el finally")
     }
 
 
@@ -100,10 +100,10 @@
 (() => {
   const $axios = document.getElementById("axios"),
     $fragment = document.createDocumentFragment();
-
-  axios.get("https://jsonplaceholder.typicode.com/user")
+  //console.log($axios)
+  axios.get("https://jsonplaceholder.typicode.com/users")
     .then(res => {
-      console.log(res);
+      //console.log(res);
       let json = res.data;
 
       json.forEach(el => {
@@ -113,11 +113,40 @@
       });
       $axios.appendChild($fragment);
     }).catch(err => {
-      console.log(err.respose)
+      //console.log(err.respose)
       let message = err.response.statusText || "Ocurrio un error";
       $axios.innerHTML = `Error....${err.response.status}: ${message}`;
     }).finally(() => {
-      console.log("Esto se ejecutara independientemete")
+      //console.log("Esto se ejecutara independientemete")
     });
 
+})();
+(() => {
+  const $axiosAsync = document.getElementById("axios-async"),
+    $fragment = document.createDocumentFragment();
+
+  //console.log($axiosAsync)
+
+  async function getData() {
+    try {
+      let res = await axios.get("https://jsonplaceholder.typicode.com/users");
+      json = await res.data;
+      //console.log(res, json)
+
+      json.forEach(el => {
+        const $li = document.createElement("li");
+        $li.innerHTML = `${el.name}--${el.email}--${el.phone}`;
+        $fragment.appendChild($li);
+
+      });
+      $axiosAsync.appendChild($fragment);
+    } catch (err) {
+      //console.log(err.response)
+      let message = err.response.statusText || "Ocurrio un error";
+      $axiosAsync.innerHTML = `Error....${err.response.status}: ${message}`;
+    } finally {
+      console.log("jajajaj finally")
+    }
+  }
+  getData();
 })();

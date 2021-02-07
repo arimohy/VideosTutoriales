@@ -1,0 +1,86 @@
+{
+  "tripulacion": [
+    {
+      "nombre": "Luffy",
+      "cargo": "Capitan",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Zorro",
+      "cargo": "Espachin"
+    },
+    {
+      "id": 3,
+      "nombre": "Sanji",
+      "cargo": "Cocinero"
+    },
+    {
+      "id": 4,
+      "nombre": "Nami",
+      "cargo": "Navegante"
+    },
+    {
+      "id": 5,
+      "nombre": "Usoop",
+      "cargo": "francotirador"
+    },
+    {
+      "id": 7,
+      "nombre": "Franki",
+      "cargo": "Carpintero"
+    },
+    {
+      "id": 8,
+      "nombre": "Robin",
+      "cargo": "arqueologa"
+    },
+    {
+      "id": 9,
+      "nombre": "brook",
+      "cargo": "Musico"
+    },
+    {
+      "id": 10,
+      "nombre": "jimbe",
+      "cargo": "timonel"
+    },
+    {
+      "nombre": "chopper",
+      "cargo": "doctor",
+      "id": 11
+    },
+    {
+      "nombre": "vvvvv",
+      "cargo": "vvv",
+      "id": 12
+    }
+  ],
+  "youkos": [
+    {
+      "id": 1,
+      "nombre": "Shanks",
+      "nombretriplacion": "Piratas del Pelirrojo"
+    },
+    {
+      "id": 2,
+      "nombre": "Charlotte Linlin",
+      "nombretriplacion": "Piratas de Big Mom"
+    },
+    {
+      "id": 3,
+      "nombre": "Kaido",
+      "nombretriplacion": "Piratas de las Bestias"
+    },
+    {
+      "id": 4,
+      "nombre": "Marshall D. Teach",
+      "nombretriplacion": "Piratas de Barbanegra"
+    },
+    {
+      "id": 5,
+      "nombre": "Edward Newgate†",
+      "nombretriplacion": "Piratas de Barbablanca‡"
+    }
+  ]
+}
